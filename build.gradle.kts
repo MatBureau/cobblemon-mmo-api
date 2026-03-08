@@ -2,7 +2,6 @@ plugins {
     kotlin("jvm") version "2.0.21"
     kotlin("plugin.serialization") version "2.0.21"
     application
-    id("com.github.johnrengelman.shadow") version "8.3.6"
 }
 
 group = "com.cobblemon.mmo"
@@ -18,10 +17,6 @@ application {
     mainClass.set("com.cobblemon.mmo.ApplicationKt")
 }
 
-tasks.shadowJar {
-    archiveFileName.set("app.jar")
-    mergeServiceFiles()
-}
 
 repositories {
     mavenCentral()
